@@ -4,6 +4,9 @@ const shoes = require('./models/shoes')
 const app = express()
 const PORT = 3000
 
+//Middleware
+app.use(express.static('public'))
+
 //Default
 app.get('/', (req, res) => {
     res.send('App is up and running!')

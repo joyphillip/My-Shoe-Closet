@@ -43,12 +43,18 @@ app.get('/mycloset/:id', (req, res) => {
 })
 
 //Edit - GET
-// app.get('/mycloset/:id/edit', (req, res) => {
-//     res.render('edit.ejs', {
-//         shoes: shoes[req.params.id],
-//         id: req.params.id
-//     })
-// })
+app.get('/mycloset/:id/edit', (req, res) => {
+    res.render('edit.ejs', {
+        shoes: shoes[req.params.id],
+        id: req.params.id
+    })
+})
+
+//Update - PUT
+app.put('/mycloset/:id', (req, res) => {
+    shoes[req.params.id] = req.body
+    res.redirect('/mycloset')
+})
 
 //Destory - DELETE
 app.delete('/mycloset/:id', (req, res) => {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Add a New Shoe </h1>
+    <form action="/mycloset" method="POST">
+        <fieldset>
+            <label for="brand">Brand:</label>
+            <input id="brand" type="text" name="brand">
+          </fieldset>
+          <fieldset>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name">
+          </fieldset>
+          <fieldset>
+            <label for="img">Image:</label>
+            <input id="img" type="url" name="img" placeholder="place url here">
+          </fieldset>
+          <fieldset>
+            <label for="price">Price:</label>
+            <input id="price" type="text" name="price">
+          </fieldset>
+          <fieldset>
+            <label for="category">Category:</label>
+            <input id="category" type="text" name="category" placeholder="Sneaker/Sandal/Heel/Boot">
+          </fieldset>
+          <fieldset>
+            <label for="comfortable">Comfortable?</label>
+            <input id="comfortable" type="checkbox" name="comfortable">
+          </fieldset>
+          <button>Add new Shoe!</button>
+    </form>
+</body>
+</html>

@@ -5,6 +5,8 @@ const app = express()
 const PORT = 3000
 
 //Middleware
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 
 //Default
@@ -18,6 +20,12 @@ app.get('/mycloset', (req, res) => {
         allShoes: shoes
     })
 })
+
+//New - GET
+app.get('/mycloset/new', (req, res) =>{
+    res.render('new.ejs')
+})
+
 
 //Show - GET
 app.get('/mycloset/:id', (req, res) => {

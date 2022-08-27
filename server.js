@@ -26,6 +26,12 @@ app.get('/mycloset/new', (req, res) =>{
     res.render('new.ejs')
 })
 
+//Create - POST
+app.post('/mycloset', (req, res) => {
+    console.log(req.body)
+    shoes.push(req.body)
+    res.redirect('/mycloset')
+})
 
 //Show - GET
 app.get('/mycloset/:id', (req, res) => {

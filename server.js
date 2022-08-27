@@ -1,25 +1,18 @@
 //Dependencies
 const express = require('express')
-const shoes = require('./models/shoes')
+// const shoes = require('./models/seed.js')
+const Shoes = require('./models/shoes.js')
 const app = express()
 const PORT = 3000
 const methodOverride = require('method-override')
 
 //Mongoose
-const mongoose = require('mongoose')
-const Shoes = require('./models/shoes')
+const mongoose = require('mongoose');
 
-// Global configuration
-const mongoURI = 'mongodb://localhost:27017/'+ 'shoes'
-const db = mongoose.connection
-
-// Connect to Mongo
-mongoose.connect(mongoURI)
-mongoose.connect(mongoURI, () => {
-    console.log('the connection with mongod is established')
-  })
-  
-
+mongoose.connect('mongodb://127.0.0.1:27017/basiccrud', { useNewUrlParser: true});
+mongoose.connection.once('open', ()=> {
+    console.log('connected to mongo');
+});
 
 
 //Middleware
@@ -37,9 +30,11 @@ app.get('/', (req, res) => {
 
 //Index - GET
 app.get('/mycloset', (req, res) => {
-    res.render('index.ejs', {
-        allShoes: shoes
-    })
+    Shoes.find({}, (error, allShoes) => {
+        res.render('index.ejs', {
+            shoes: allShoes
+    }) 
+  })
 })
 
 //New - GET
@@ -49,15 +44,27 @@ app.get('/mycloset/new', (req, res) =>{
 
 //Create - POST
 app.post('/mycloset', (req, res) => {
-    console.log(req.body)
-    shoes.push(req.body)
-    res.redirect('/mycloset')
+    if(req.body.comfortable === 'on') {
+        req.body.comfortable = true
+    } else {
+        req.body.comfortable = false
+    }
+    Shoes.create(req.body, (error, createdShoe) => {
+        if(error){
+            console.log('error', error)
+            res.send(error)
+        } else {
+            res.redirect('/mycloset')
+        }
+    })
 })
 
 //Show - GET
 app.get('/mycloset/:id', (req, res) => {
-    res.render('show.ejs', {
-        shoes: shoes[req.params.id]
+    Shoes.findById(req.params.id, (error, foundShoe) => {
+        res.render('show.ejs', {
+            shoes: foundShoe
+        })
     })
 })
 

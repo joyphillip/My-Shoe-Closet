@@ -4,16 +4,16 @@
     <h3> Collection </h3>
 <nav>
     <button id="newBtn"> 
-        <a href="/mycloset/new">Add a Shoe</a>
+        <a href="/mycloset/new">Add a New Shoe</a>
     </button>
 </nav>
     <div>
         <ul>
-        <% for(let i = 0; i < allShoes.length; i++) { %>
+        <% for(let i = 0; i < shoes.length; i++) { %>
             <li>
-                <a href="/mycloset/<%=i%> ">
-                <img src="<%= allShoes[i].img %>">
-                <p><%= allShoes[i].name  %> </p>
+                <a href="/mycloset/<%=shoes[i].id%>  ">
+                <img src="<%= shoes[i].img %>">
+                <p><%= shoes[i].name  %> </p>
                 </a>
                 <!-- Edit -->
                 <button class="edit"><a href="/mycloset/<%=i%>/edit">Edit</a></button>

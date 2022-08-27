@@ -40,6 +40,14 @@ app.get('/mycloset/:id', (req, res) => {
     })
 })
 
+//Edit - GET
+app.get('/mycloset/:id/edit', (req, res) => {
+    res.render('edit.ejs', {
+        shoes: shoes[req.params.id],
+        id: req.params.id
+    })
+})
+
 //Listener
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT} 🎧 `)

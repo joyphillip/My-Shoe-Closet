@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="edit_page">
+        <h1> Edit Shoe </h1>
+        <form action="/mycloset/<%=id%>?_method=PUT" method="POST">
+            <label for="brand"> Brand: </label> <br>
+            <input type="text" name="brand" id="brand" value=<%= shoes.brand %> ><br>
+            <label for="name"> Name: </label> <br>
+            <input type="text" name="name" id="name" value=<%= shoes.name %> ><br>
+            <label for="image"> Image:</label> <br>
+            <input type="url" name="img" id="img" value=<%= shoes.img%>> <br>
+            <label for="color"> Color: </label> <br>
+            <input type="text" name="color" id="color" value=<%= shoes.color %> ><br>
+            <label for="price"> Price: </label> <br>
+            <input type="text" name="price" id="price" value=<%= shoes.price %> ><br>
+            <label for="category"> Category: </label> <br>
+            <input type="text" name="category" id="category" value=<%= shoes.category%> ><br>
+            <label for="comfortable"> Comfortable? </label> <br>
+            <input type="checkbox" name="comfortable" id="comfortable" value=<%= shoes.comfortable%> ><br>
+            <input class="edit" type="submit" value="Edit Shoe">
+            </form>
+        </div>
+</body>
+</html>

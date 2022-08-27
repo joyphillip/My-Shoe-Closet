@@ -5,6 +5,7 @@ const router = express.Router()
 
 
 //Default
+//Register
 router.get('/register', (req, res) => {
     res.render('users/register.ejs')
 })
@@ -27,7 +28,10 @@ router.post('/register', (req, res) => {
     })
 })
 
-
+// Sign-in
+router.get('/signin', (req, res) => {
+    res.render('users/signin.ejs')
+})
 
 
 

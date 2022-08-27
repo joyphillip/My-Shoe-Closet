@@ -19,6 +19,13 @@ app.get('/mycloset', (req, res) => {
     })
 })
 
+//Show - GET
+app.get('/mycloset/:id', (req, res) => {
+    res.render('show.ejs', {
+        shoes: shoes[req.params.id]
+    })
+})
+
 //Listener
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT} 🎧 `)

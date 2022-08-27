@@ -2,11 +2,21 @@
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
-const shoesController = require('./controllers/shoesController')
+const session = require('express-session')
+
+
 
 //.env
 require('dotenv').config()
 const PORT = process.env.PORT
+
+//Sessions
+const SESSION_SECRET = process.env.SESSION_SECRET
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
 
 //Mongoose
 const mongoose = require('mongoose');
@@ -16,17 +26,18 @@ mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
-
-
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
-//Router 
+//Router
+const shoesController = require('./controllers/shoesController') 
 app.use('/mycloset', shoesController)
 
+const userController = require('./controllers/userController')
+app.use('/users', userController)
 
 //Default
 app.get('/', (req, res) => {

@@ -2,7 +2,7 @@
 
     <div class="edit_page">
         <h1> Edit Shoe </h1>
-        <form action="/fruits/<%=shoes.id%>?_method=PUT" method="POST">
+        <form action="/mycloset/<%=shoes.id%>?_method=PUT" method="POST">
             <label for="brand"> Brand: </label> <br>
             <input type="text" name="brand" id="brand" value=<%= shoes.brand %> ><br>
             <label for="name"> Name: </label> <br>
@@ -21,7 +21,7 @@
                 checked
                 <% } %> 
                 /> 
-            <input class="edit" type="submit" value="Edit Shoe">
+            <input type="submit" name="" value="Submit Changes"/>
             </form>
         </div>
 

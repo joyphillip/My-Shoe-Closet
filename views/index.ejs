@@ -16,11 +16,11 @@
                 <p><%= shoes[i].name  %> </p>
                 </a>
                 <!-- Edit -->
-                <a href="/mycloset/<%=shoes[i].id; %>/edit">Edit</a>
+                <button><a href="/mycloset/<%=shoes[i].id; %>/edit">Edit</a></button>
 
                 <!-- Delete Form -->
                 <form action="/mycloset/<%=shoes[i].id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete">
+                    <input type="button" value="Delete">
                 </form>
             </li>
 

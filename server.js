@@ -27,9 +27,19 @@ app.get('/', (req, res) => {
     res.send('App is up and running!')
 })
 
+
+//Index - GET
+app.get('/mycloset', (req, res) => {
+    Shoes.find({}, (error, allShoes) => {
+        res.render('index.ejs', {
+            shoes: allShoes
+    }) 
+  })
+})
+
 //Seed - GET
 app.get('/mycloset/seed', (req, res) => {
-    Shoes.create = [
+    Shoes.create([
         {
             brand: 'Nike',
             name: 'Jordan 1s',
@@ -57,16 +67,7 @@ app.get('/mycloset/seed', (req, res) => {
             }
         ], (err, data) => {
             res.redirect('/mycloset')
-        }    
-})
-
-//Index - GET
-app.get('/mycloset', (req, res) => {
-    Shoes.find({}, (error, allShoes) => {
-        res.render('index.ejs', {
-            shoes: allShoes
-    }) 
-  })
+        })    
 })
 
 //New - GET

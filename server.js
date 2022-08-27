@@ -5,11 +5,30 @@ const app = express()
 const PORT = 3000
 const methodOverride = require('method-override')
 
+//Mongoose
+const mongoose = require('mongoose')
+const Shoes = require('./models/shoes')
+
+// Global configuration
+const mongoURI = 'mongodb://localhost:27017/'+ 'shoes'
+const db = mongoose.connection
+
+// Connect to Mongo
+mongoose.connect(mongoURI)
+mongoose.connect(mongoURI, () => {
+    console.log('the connection with mongod is established')
+  })
+  
+
+
+
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
+
+
 
 //Default
 app.get('/', (req, res) => {

@@ -1,6 +1,5 @@
 //Dependencies
 const express = require('express')
-// const shoes = require('./models/seed.js')
 const Shoes = require('./models/shoes.js')
 const app = express()
 const PORT = 3000
@@ -103,21 +102,29 @@ app.get('/mycloset/:id', (req, res) => {
 
 //Edit - GET
 app.get('/mycloset/:id/edit', (req, res) => {
-    res.render('edit.ejs', {
-        shoes: shoes[req.params.id],
-        id: req.params.id
+    Shoes.findById(req.params.id, (error, foundShoe) => {
+        res.render( 'edit.ejs', {
+            shoes: foundShoe
+        })
     })
 })
 
+
 //Update - PUT
 app.put('/mycloset/:id', (req, res) => {
-    shoes[req.params.id] = req.body
-    res.redirect('/mycloset')
+    if(req.body.comfortable === 'on') {
+        req.body.comfortable = true
+    } else {
+        req.body.comfortable = false
+    }
+    Shoes.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedModel) => {
+        res.redirect('/mycloset')
+    })
 })
 
 //Destory - DELETE
 app.delete('/mycloset/:id', (req, res) => {
-    Shoes.findByIdAndRemove(req.params.id, (err, datd) => {
+    Shoes.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/mycloset')
     })
 })

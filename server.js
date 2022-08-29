@@ -44,10 +44,10 @@ const userController = require('./controllers/userController.js')
 app.use('/users', userController)
 
 
-//Default
-app.get('/', (req, res) => {
-    res.send('App is up and running!')
-})
+// //Default
+// app.get('/', (req, res) => {
+//     res.send('App is up and running!')
+// })
 
 
 //Listener

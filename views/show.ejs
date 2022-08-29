@@ -1,22 +1,23 @@
 <%- include('./partials/header.ejs') %>
-
-    <div>
+<body class="show_pg">
+    <div class="show_header">
     <h1> <%= shoes.brand %> </h1>
     <h2> <%= shoes.name  %> </h2>
     </div>
 
-    <img src="<%= shoes.img %> ">
-
-    <section>
-        <ul>
-            <li>Color: <%= shoes.color %></li>
-            <li>Price: $<%= shoes.price %></li>    
-            <li>Comfortable: <%= shoes.comfortable %></li>  
-            <li>Category: <%= shoes.category %></li>
+    <div class="show_info">
+    <img class="show_img" src="<%= shoes.img %> ">
+    <br>
+        <ul class="show_list">
+            <li><strong>Color: </strong> <%= shoes.color %></li>
+            <li><strong>Price: </strong> $<%= shoes.price %></li>    
+            <li><strong>Comfortable: </strong> <%= shoes.comfortable %></li>  
+            <li><strong>Category: </strong> <%= shoes.category %></li>
+            <nav>
+                <button class="nav_Btn"><a href="/mycloset"> Back to Collection </a></button>
+            </nav>
         </ul>
-    </section>
-    <nav>
-        <a href="/mycloset"> Back to Collection </a>
-    </nav>
+    </div>
     
+</body>
     <%- include('./partials/footer.ejs') %>

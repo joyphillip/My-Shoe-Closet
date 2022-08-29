@@ -1,7 +1,9 @@
 <%- include('./partials/header.ejs') %>
 
-    <div class="edit_page">
-        <h1> Edit Shoe </h1>
+<body class="edit_pg">
+    <div>
+        <h1 class="edit_header"> Edit Shoe </h1>
+        <div class="edit_form">
         <form action="/mycloset/<%=shoes.id%>?_method=PUT" method="POST">
             <label for="brand"> Brand: </label> <br>
             <input type="text" name="brand" id="brand" value=<%= shoes.brand %> ><br>
@@ -21,11 +23,12 @@
                 checked
                 <% } %> 
                 /> 
+                <br>
             <input type="submit" name="" value="Submit Changes"/>
             </form>
         </div>
         <nav>
-            <a href="/mycloset"> Back to Collection </a>
+            <button class="edit_nav_Btn"><a href="/mycloset"> Back to Collection </a></button> 
         </nav>
-
+    </body>
         <%- include('./partials/footer.ejs') %>

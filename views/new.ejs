@@ -1,34 +1,32 @@
 <%- include('./partials/header.ejs') %>
-
-    <h1> Add a New Shoe </h1>
+<body class="new_pg">
+    <h1 class="new_header"> Add a New Shoe </h1>
+    <div class="new_form">
     <form action="/mycloset" method="POST">
-        <fieldset>
             <label for="brand">Brand:</label>
-            <input id="brand" type="text" name="brand">
-          </fieldset>
-          <fieldset>
+            <input id="brand" type="text" name="brand"><br>
+          
             <label for="name">Name:</label>
-            <input id="name" type="text" name="name">
-          </fieldset>
-          <fieldset>
+            <input id="name" type="text" name="name"><br>
+          
             <label for="img">Image:</label>
-            <input id="img" type="url" name="img" placeholder="place url here">
-          </fieldset>
-          <fieldset>
+            <input id="img" type="url" name="img" placeholder="place url here"><br>
+          
             <label for="price">Price:</label>
-            <input id="price" type="text" name="price">
-          </fieldset>
-          <fieldset>
+            <input id="price" type="text" name="price"><br>
+          
             <label for="category">Category:</label>
-            <input id="category" type="text" name="category" placeholder="Sneaker/Sandal/Heel/Boot">
-          </fieldset>
-          <fieldset>
+            <input id="category" type="text" name="category" placeholder="Sneaker/Sandal/Heel/Boot"><br>
+          
             <label for="comfortable">Comfortable?</label>
-            <input id="comfortable" type="checkbox" name="comfortable">
-          </fieldset>
+            <input id="comfortable" type="checkbox" name="comfortable"><br>
+         
           <button>Add new Shoe!</button>
     </form>
+  </div>
     <nav>
-      <a href="/mycloset"> Back to Collection </a>
+      <button class="nav_Btn"><a href="/mycloset"> Back to Collection </a></button>
   </nav>
+</body>
+
     <%- include('./partials/footer.ejs') %>

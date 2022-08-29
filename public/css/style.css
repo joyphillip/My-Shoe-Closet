@@ -1,41 +1,134 @@
 
-body {
+/* body {
     /* background-image: url("https://i.postimg.cc/VkGTfqj2/Wallpaper-Dog-17244287.jpg") ; */
     /* background-image: url("https://i.postimg.cc/G2qTVp0P/Wallpaper-Dog-970859.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    /* background-repeat: no-repeat;
+    background-size:contain;
+} */ 
 
+/* Index Page */
 .index_header {
     text-align: center;
 }
-#new_Btn {
+
+.container {
+    display: flex;
+}
+
+.item {
+    background: #ce8888;
+    flex-basis: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+
+#new_btn {
+    margin: 15px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background-color: lightgray;
+}
+
+/* Show Page */
+.show_pg {
+    background: url('https://i.postimg.cc/ZY1hGW3T/Editand-New.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.show_header {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.show_info {
+    margin-left: 50%;
+    margin-top: 10%;
     text-align: center;
 }
 
-ul {
+.show_img {
+    border: 5px solid black;
+    border-radius: 8px;
+}
+
+.show_list {
     list-style: none;
-
+    font-size: 20px;
 }
 
-.shoe_info {
-    display: flex;
-    align-items: center;
+.nav_Btn {
+    margin: 15px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background-color: lightgray;
 }
 
-/* .img {
-    display: flex;
-    flex-direction: row;
-        margin: auto;
-        max-width: 100%;
-        max-height: 100%;
-    } */
+/* Edit Page */
+.edit_pg {
+    /* background: url('https://i.postimg.cc/FKVWz9hq/Wallpaper-Dog-970859.jpg'); */
+    background: url('https://i.postimg.cc/G2qTVp0P/Wallpaper-Dog-970859.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
-/* .images {
-    display: flexbox;
-    flex-direction: row;
-    align-items: center;
-} */
+.edit_header {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 2px solid  black;
+    margin-top: 15px;
+}
+
+.edit_form {
+    text-align: center;
+    background-color: white;
+    margin-top: 10%;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+.edit_nav_Btn {
+    text-align: center;
+    margin: 15px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background-color: lightgray;
+}
+
+/* New Page */
+.new_pg {
+    /* background: url('https://i.postimg.cc/G2qTVp0P/Wallpaper-Dog-970859.jpg'); */
+    background: url('https://i.postimg.cc/6qJ2bbbN/Sneaker-Boxes-Tall.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.new_header {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 2px solid  black;
+    margin-top: 15px;
+}
+
+.new_form {
+    text-align: center;
+    background-color: white;
+    margin-top: 10%;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 24px;
+}
 
 .footer {
     text-align: center;
@@ -48,12 +141,3 @@ ul {
     width: 100%;
     height: 40px;
 }
-/* .footer {
-    color: gray;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    padding: 20px;
-    border-top: solid;
-    border-color: gray;
-  } */

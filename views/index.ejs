@@ -12,16 +12,18 @@
         <% for(let i = 0; i < shoes.length; i++) { %>
             <div class="item">
                 <a href="/mycloset/<%=shoes[i].id%>  ">
-                <img class="img" src="<%= shoes[i].img %>">
+                <img class="index_img" src="<%= shoes[i].img %>">
             </a>
-                  <p> <%= shoes[i].name  %> </p> 
+                <div class="index_info">
+                  <p><strong> <%= shoes[i].name  %> </strong></p> 
                 
                 <!-- Edit -->
-                <button><a href="/mycloset/<%=shoes[i].id; %>/edit">Edit</a></button>
+                <button class="edit_btn"><a href="/mycloset/<%=shoes[i].id; %>/edit">Edit</a></button>
                 <!-- Delete Form -->
                 <form action="/mycloset/<%=shoes[i].id %>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete">
                 </form>
+            </div>
         </div>
 
        <% } %> 

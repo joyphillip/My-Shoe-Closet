@@ -13,14 +13,29 @@
 
 .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.item {
-    background: #ce8888;
-    flex-basis: 100px;
-    height: 100px;
-    margin: 5px;
+.index_img {
+    float: left;
+    width:  450px;
+    height: 295px;
+    /* object-fit: cover;  */
 }
+
+.index_info {
+    text-align: center;
+}
+
+/* .edit_btn {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+} */
 
 
 #new_btn {

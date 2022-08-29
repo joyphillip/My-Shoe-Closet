@@ -1,6 +1,7 @@
 //Require mongoose
 const mongoose = require("mongoose")
 
+
 //Create Schema
 const shoesSchema = new mongoose.Schema({
     brand: String,

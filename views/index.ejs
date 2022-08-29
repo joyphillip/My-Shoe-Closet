@@ -1,18 +1,19 @@
 <%- include('./partials/header.ejs') %>
-
+<div class="index_header">
     <h1> My Shoe Closet </h1>
     <h3> Collection </h3>
-<nav>
-    <button id="newBtn"> 
+</div>
+<nav id="new_Btn">
+    <button> 
         <a href="/mycloset/new">Add a New Shoe</a>
     </button>
 </nav>
-    <div>
+    <div class="shoe_info">
         <ul>
         <% for(let i = 0; i < shoes.length; i++) { %>
             <li>
                 <a href="/mycloset/<%=shoes[i].id%>  ">
-                <img src="<%= shoes[i].img %>">
+                <img class="img" src="<%= shoes[i].img %>">
                 <p><%= shoes[i].name  %> </p>
                 </a>
                 <!-- Edit -->
@@ -20,7 +21,7 @@
 
                 <!-- Delete Form -->
                 <form action="/mycloset/<%=shoes[i].id %>?_method=DELETE" method="POST">
-                    <input type="button" value="Delete">
+                    <input type="submit" value="Delete">
                 </form>
             </li>
 

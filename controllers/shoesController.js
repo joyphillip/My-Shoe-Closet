@@ -3,6 +3,8 @@ const express = require('express')
 const router = express.Router()
 const Shoes = require('../models/shoes')
 
+
+
 //Index - GET
 router.get('/', (req, res) => {
     Shoes.find({}, (error, allShoes) => {

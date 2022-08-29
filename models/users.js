@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 //Create Schema
 const userSchema = new mongoose.Schema({
     username: {type: String, required: true, unique: true},
-    passsword: String
+    passsword: {type: String, required: true}
 })
 
 //Make schema into model

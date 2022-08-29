@@ -1,3 +1,59 @@
+
 body {
-    background: rgb(241, 241, 171);
+    /* background-image: url("https://i.postimg.cc/VkGTfqj2/Wallpaper-Dog-17244287.jpg") ; */
+    /* background-image: url("https://i.postimg.cc/G2qTVp0P/Wallpaper-Dog-970859.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.index_header {
+    text-align: center;
+}
+#new_Btn {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.shoe_info {
+    display: flex;
+    align-items: center;
+}
+
+/* .img {
+    display: flex;
+    flex-direction: row;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    } */
+
+/* .images {
+    display: flexbox;
+    flex-direction: row;
+    align-items: center;
+} */
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+/* .footer {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    padding: 20px;
+    border-top: solid;
+    border-color: gray;
+  } */

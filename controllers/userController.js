@@ -14,16 +14,27 @@ router.get('/register', (req, res) => {
 // Create - POST
 router.post('/register', (req, res) => {
     const salt = bcrypt.genSaltSync(10)
-    req.body.password = bcrypt.hashSync(req.body.password, salt)
-    console.log(req.body)
+    const newUser = {
+        username: req.body.username, 
+        password: bcrypt.hashSync(req.body.password, salt)
+    }
+    // req.body.password = bcrypt.hashSync(req.body.password, salt)
+    console.log(newUser)
     User.findOne({username: req.body.username}, (err, userExists) => {
        if(userExists) {
         res.send('Username is taken. Please try again')
        } else {
-        User.create(req.body, (err, createdUser) => {
-            console.log(createdUser)
+        console.log('user not found')
+        User.create(newUser, (err, createdUser) => {
+            if(err) {
+                console.log(err)
+            }
+            if(createdUser) {
+                console.log(createdUser)
             // res.send('User created')
             res.redirect('/users/signin')
+            }
+            
         })
        }
     })
@@ -43,8 +54,8 @@ router.post('/signin', (req, res) => {
             const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
             if( validLogin) {
                 req.session.currentUser = foundUser
-                // res.redirect('/mycloset')
-                res.send('User logged in')
+                res.redirect('/mycloset')
+                // res.send('User logged in')
             } else {
                 res.send('Try again')
             }
@@ -55,6 +66,7 @@ router.post('/signin', (req, res) => {
     })
 })
 
+//
 
 
 

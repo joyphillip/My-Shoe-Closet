@@ -3,7 +3,8 @@ const express = require('express')
 const router = express.Router()
 const Shoes = require('../models/shoes')
 
-
+//Home
+// router.get('/')
 
 //Index - GET
 router.get('/', (req, res) => {

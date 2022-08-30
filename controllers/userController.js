@@ -70,7 +70,7 @@ router.post('/signin', (req, res) => {
 //Destroy session route
 router.get('/signout', (req, res) => {
     req.session.destroy()
-    // res.redirect('/signin')
+    res.redirect('/users/signin')
 })
 
 

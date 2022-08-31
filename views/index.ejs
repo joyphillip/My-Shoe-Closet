@@ -1,12 +1,10 @@
 <%- include('./partials/header.ejs') %>
 <body>
 <div class="index_header">
-    <h1> My Shoe Closet </h1>
-    <h3> Collection </h3>
+    <h1> Collection </h1>
 </div>
-<nav>
+
     <button id="new_btn"> <a href="/mycloset/new">Add a New Shoe</a></button>
-</nav>
 
         <div class="container">
         <% for(let i = 0; i < shoes.length; i++) { %>

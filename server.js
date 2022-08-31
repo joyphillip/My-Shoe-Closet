@@ -43,7 +43,10 @@ app.use('/mycloset', shoesController)
 const userController = require('./controllers/userController.js')
 app.use('/users', userController)
 
-
+//Default/Home
+app.get("/", (req, res) => {
+    res.render('./users/signin.ejs')
+})
 
 
 //Listener

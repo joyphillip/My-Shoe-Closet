@@ -3,32 +3,30 @@
 <body class="edit_pg">
     <div>
         <h1 class="edit_header"> Edit Shoe </h1>
+            <button class="edit_nav_Btn"><a href="/mycloset"> Back to Collection </a></button> 
         <div class="edit_form">
         <form action="/mycloset/<%=shoes.id%>?_method=PUT" method="POST">
             <label for="brand"> Brand: </label> <br>
-            <input type="text" name="brand" id="brand" value=<%= shoes.brand %> ><br>
+            <input class="input-box" type="text" name="brand" id="brand" value=<%= shoes.brand %> ><br>
             <label for="name"> Name: </label> <br>
-            <input type="text" name="name" id="name" value=<%= shoes.name %> ><br>
+            <input class="input-box" type="text" name="name" id="name" value=<%= shoes.name %> ><br>
             <label for="image"> Image:</label> <br>
-            <input type="url" name="img" id="img" value=<%= shoes.img%>> <br>
+            <input class="input-box" type="url" name="img" id="img" value=<%= shoes.img%>> <br>
             <label for="color"> Color: </label> <br>
-            <input type="text" name="color" id="color" value=<%= shoes.color %> ><br>
+            <input class="input-box" type="text" name="color" id="color" value=<%= shoes.color %> ><br>
             <label for="price"> Price: </label> <br>
-            <input type="text" name="price" id="price" value=<%= shoes.price %> ><br>
+            <input class="input-box" type="text" name="price" id="price" value=<%= shoes.price %> ><br>
             <label for="category"> Category: </label> <br>
-            <input type="text" name="category" id="category" value=<%= shoes.category%> ><br>
+            <input class="input-box" type="text" name="category" id="category" value=<%= shoes.category%> ><br>
             <label for="comfortable"> Comfortable? </label> <br>
-            <input type="checkbox" name="comfortable" id="comfortable"
+            <input class="input-box" type="checkbox" name="comfortable" id="comfortable"
              <% if(shoes.comfortable === true) { %>
                 checked
                 <% } %> 
                 /> 
                 <br>
-            <input type="submit" name="" value="Submit Changes"/>
+            <input class="s-btn" type="submit" name="" value="Submit Changes"/>
             </form>
         </div>
-        <nav>
-            <button class="edit_nav_Btn"><a href="/mycloset"> Back to Collection </a></button> 
-        </nav>
     </body>
         <%- include('./partials/footer.ejs') %>

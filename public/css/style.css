@@ -104,12 +104,13 @@ a {
 }
 
 .edit_form {
-    text-align: center;
-    background-color: white;
-    margin-top: 10%;
-    padding: 20px;
-    border: 2px solid black;
-    font-size: 24px;
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    border: 2px solid  black;
+    background: #fff;
+    padding: 30px;
+    margin: 8% auto 0;
+    text-align: center;  
 }
 
 .edit_nav_Btn {

@@ -3,10 +3,6 @@ const express = require('express')
 const router = express.Router()
 const Shoes = require('../models/shoes')
 
-// //Home-signin
-// router.get('/', (req, res)=> {
-// res.render('/users/signin')
-// })
 
 //Index - GET
 router.get('/', (req, res) => {

@@ -45,7 +45,7 @@ app.use('/users', userController)
 
 //Default/Home
 app.get("/", (req, res) => {
-    res.render('./users/signin.ejs')
+    res.render('./users/register.ejs')
 })
 
 

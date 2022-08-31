@@ -6,21 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Shoe Closet </title>
-    <header> My Shoe Closet </header>
+    <header> My Shoe Closet 
+    <button class="signin-btn"><a href="/users/signin">Sign In</a></button>
+    </header>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="registration_pg">
-    <!-- <h1> My Shoe Closet </h1> -->
     <div class="registration">
-        <h1> Sign Up </h1>
+        <h1 class="welcome"> Welcome!</h1>
     <form action="/users/register" method="POST">
             <input class="input-box" type="text" name="username" placeholder="Username">
             <input class="input-box" type="password" name="password" placeholder="Password">
             <br>
         <button type="submit" class="s-btn"> Sign Up </button>
         <hr>
-        <p> Already have an account? <a href="/users/signin">Sign-in</a></p>
+        <p> Already have an account? <a href="/users/signin">Sign In</a></p>
     </form>
 </div>
 </body>

@@ -97,7 +97,7 @@ a {
     background: url('https://i.postimg.cc/Njd2YgNp/fadedshoeboxes.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
 }
 
@@ -132,7 +132,7 @@ a {
     background: url('https://i.postimg.cc/Njd2YgNp/fadedshoeboxes.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:scroll;
     background-size: cover;
 }
 

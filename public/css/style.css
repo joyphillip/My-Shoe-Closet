@@ -57,7 +57,7 @@ a {
 .show_pg {
     background: url('https://i.postimg.cc/9XSzJxy1/showpagebackgroundop.png');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:scroll;
     background-size: cover;
 }
 
